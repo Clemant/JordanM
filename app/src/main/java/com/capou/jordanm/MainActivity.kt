@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.capou.jordanm.databinding.ActivityMainBinding
+import com.capou.jordanm.firebase_all.view.AuthentificationFirebase
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,8 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         // Launch Activity Firebase
         binding.homePageFirebase.setOnClickListener {
-          //  val intent = Intent(applicationContext,AuthentificationFirebase::class.java)
-          //  startActivity(intent)
+            val intent = Intent(applicationContext,AuthentificationFirebase::class.java)
+            startActivity(intent)
             Log.d(TAG,"start firebase")
             Toast.makeText(applicationContext,"start Firebase",Toast.LENGTH_LONG).show()
         }

@@ -5,4 +5,8 @@
     <string name="classroom">ClassRoom</string>
     <string name="list">Display list</string>
     <string name="version">Default Version</string>
+    <string name="connexion">Sign In</string>
+    <string name="inscription">Sign up, now.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>

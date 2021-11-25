@@ -9,4 +9,8 @@
     <string name="list">Afficher liste</string>
     <string name="firebase" translatable="false">Firebase</string>
     <string name="version">Version par défaut</string>
+    <string name="connexion">S\'identifier</string>
+    <string name="inscription">S\'inscrire.</string>
+    <string name="email">Adresse mail</string>
+    <string name="password">Mot de passe</string>
 </resources>
