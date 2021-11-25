@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">JordanM</string>
+    <string name="firstNameText">Marie-Joseph</string>
+    <string name="lastNameText">Capou</string>
+    <string name="classroomText">Master 2 CCM (2021/2022)</string>
+    <string name="firstName">Prénom:</string>
+    <string name="lastName">Nom:</string>
+    <string name="classroom">Promo:</string>
+    <string name="list">Afficher liste</string>
+    <string name="firebase">Firebase</string>
+    <string name="version">Default version</string>
 </resources>
