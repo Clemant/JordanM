@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firstName">FirstName</string>
+    <string name="lastName">LastName</string>
+    <string name="classroom">ClassRoom</string>
+    <string name="list">Display list</string>
+    <string name="version">Default Version</string>
+</resources>
