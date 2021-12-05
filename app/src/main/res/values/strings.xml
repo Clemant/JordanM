@@ -13,4 +13,7 @@
     <string name="inscription">S\'inscrire.</string>
     <string name="email">Adresse mail</string>
     <string name="password">Mot de passe</string>
+    <string name="signout">Se déconnecter</string>
+    <string name="signin_signout">Connexion/Déconnexion</string>
+    <string name="uid">Votre UID: </string>
 </resources>
