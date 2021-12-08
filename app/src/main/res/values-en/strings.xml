@@ -12,4 +12,6 @@
     <string name="signout">Sign Out</string>
     <string name="signin_signout">Sign In/Sign Out</string>
     <string name="uid">Your UID: </string>
+    <string name="addRestaurant">"add "</string>
+    <string name="deleteRestaurant">delete</string>
 </resources>

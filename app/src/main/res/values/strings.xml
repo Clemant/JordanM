@@ -16,4 +16,6 @@
     <string name="signout">Se déconnecter</string>
     <string name="signin_signout">Connexion/Déconnexion</string>
     <string name="uid">Votre UID: </string>
+    <string name="addRestaurant">"add "</string>
+    <string name="deleteRestaurant">delete</string>
 </resources>
