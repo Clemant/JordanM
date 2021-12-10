@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.capou.jordanm.api.view.ListData
 import com.capou.jordanm.databinding.ActivityMainBinding
 import com.capou.jordanm.firebase_all.view.AuthentificationFirebase
 
@@ -35,8 +36,8 @@ class MainActivity : AppCompatActivity() {
 
         //Launch Activity List
         binding.homePageList.setOnClickListener {
-          //  val intent = Intent(applicationContext,ListApi::class.java)
-          //  startActivity(intent)
+            val intent = Intent(applicationContext,ListData::class.java)
+           startActivity(intent)
             Log.d(TAG,"start List")
             Toast.makeText(applicationContext,"start List",Toast.LENGTH_LONG).show()
         }
