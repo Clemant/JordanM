@@ -1,9 +1,10 @@
 package com.capou.jordanm.api.remote
 
-import com.capou.jordanm.api.model.RestaurantModelAPI
+import com.capou.jordanm.api.model.ChuckNorrisRetrofit
 import retrofit2.http.GET
 
-interface RestaurantEndPoint {
+
+interface ChuckNorrisQuoteEndpoint {
     @GET("random_restaurant")
-    suspend fun getRandomRestaurant() : RestaurantModelAPI
+    suspend fun getRandomQuote() : ChuckNorrisRetrofit
 }

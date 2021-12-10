@@ -1,20 +1,22 @@
 package com.capou.jordanm.architecture
 
+import android.content.Context
 import androidx.room.Database
+import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.capou.jordanm.api.dao.RestaurantDAO
-import com.capou.jordanm.api.model.RestaurantModel
-
+import com.capou.jordanm.api.dao.ChuckNorrisDao
+import com.capou.jordanm.api.model.ChuckNorrisRoom
 
 @Database(
     entities = [
-        // TODO add entity later
-        RestaurantModel::class
+        ChuckNorrisRoom::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
-    //retourne le schema de la base de données table ect en format json
 )
-abstract class MyDataBase: RoomDatabase() {
-    abstract fun restaurantDao(): RestaurantDAO
+abstract class CustomRoomDatabase : RoomDatabase() {
+
+
+    abstract fun chuckNorrisDao() : ChuckNorrisDao
+
 }

@@ -1,20 +1,24 @@
 package com.capou.jordanm.api.dao
 
-import androidx.lifecycle.LiveData
-import androidx.room.*
-import com.capou.jordanm.api.model.RestaurantModel
 
+import androidx.lifecycle.LiveData
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.capou.jordanm.api.model.ChuckNorrisRoom
 
 @Dao
-interface RestaurantDAO {
+interface ChuckNorrisDao {
 
     @Query("SELECT * FROM restaurant")
-    fun getAllRestaurant():LiveData<List<RestaurantModel>>
+    fun selectAll() : LiveData<List<ChuckNorrisRoom>>
+
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(restaurantModel: RestaurantModel)
+    fun insert(chuckNorrisRoom: ChuckNorrisRoom)
+
 
     @Query("DELETE FROM restaurant")
-    suspend fun deleteAll()
-
+    fun deleteAll()
 }

@@ -7,10 +7,10 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/chuckNorrisActivityRv"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/addRestaurant"
+        app:layout_constraintBottom_toTopOf="@+id/chuckNorrisActivityAdd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,21 +19,21 @@
 
 
     <Button
-        android:id="@+id/addRestaurant"
+        android:id="@+id/chuckNorrisActivityAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/addRestaurant"
+        android:text="add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/deleteRestaurant"
+        app:layout_constraintEnd_toStartOf="@id/chuckNorrisActivityDelete"
         app:layout_constraintStart_toStartOf="parent" />
 
 
     <Button
-        android:id="@+id/deleteRestaurant"
+        android:id="@+id/chuckNorrisActivityDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/deleteRestaurant"
+        android:text="delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/addRestaurant" />
+        app:layout_constraintStart_toEndOf="@id/chuckNorrisActivityAdd" />
 </androidx.constraintlayout.widget.ConstraintLayout>

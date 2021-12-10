@@ -5,16 +5,15 @@ import androidx.room.Room
 
 class CustomApplication : Application() {
 
-
     companion object {
         lateinit var instance: CustomApplication
     }
 
 
-    val mApplicationDatabase: MyDataBase by lazy {
+    val mApplicationDatabase: CustomRoomDatabase by lazy {
         Room.databaseBuilder(
             applicationContext,
-            MyDataBase::class.java,
+            CustomRoomDatabase::class.java,
             "JordanMDatabase"
         ).fallbackToDestructiveMigration().build()
     }

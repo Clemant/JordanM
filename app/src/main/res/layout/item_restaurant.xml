@@ -4,58 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
+    android:layout_margin="4dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="0dp">
-
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/itemLogo"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_margin="5dp"
+            android:id="@+id/itemChuckNorrisIcon"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:layout_margin="8dp"
+            android:layout_marginStart="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25"
             tools:src="@tools:sample/avatars" />
 
-        <TextView
-            android:id="@+id/itemName"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrain"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text=""
-            app:layout_constraintStart_toEndOf="@+id/itemLogo"
-            app:layout_constraintStart_toStartOf="@+id/itemType"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="@tools:sample/full_names" />
-
-        <TextView
-            android:id="@+id/itemAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/itemLogo"
-            app:layout_constraintStart_toStartOf="@+id/itemType"
-            tools:text="@tools:sample/cities" />
-
-        <TextView
-            android:id="@+id/itemType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginHorizontal="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="@id/itemChuckNorrisIcon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.125"
-            app:layout_constraintStart_toEndOf="@+id/itemLogo"
-            app:layout_constraintTop_toBottomOf="@+id/itemAddress"
-            app:layout_constraintVertical_bias="0.23"
-            tools:text="@tools:sample/last_names" />
+            app:layout_constraintStart_toEndOf="@+id/itemChuckNorrisIcon"
+            app:layout_constraintTop_toTopOf="@id/itemChuckNorrisIcon">
+
+
+        <TextView
+            android:id="@+id/itemChuckNorrisQuote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@tools:sample/full_names"
+            app:layout_constraintTop_toTopOf="@+id/constrain"
+            app:layout_constraintLeft_toLeftOf="@+id/constrain"
+            />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            tools:text="@tools:sample/cities"
+            app:layout_constraintTop_toBottomOf="@+id/itemChuckNorrisQuote"
+            app:layout_constraintLeft_toLeftOf="@+id/itemChuckNorrisQuote" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:text="@tools:sample/cities"
+                app:layout_constraintTop_toBottomOf="@+id/type"
+                app:layout_constraintLeft_toLeftOf="@+id/type" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            tools:text="@tools:sample/cities"
+            app:layout_constraintTop_toBottomOf="@+id/constrain"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>
