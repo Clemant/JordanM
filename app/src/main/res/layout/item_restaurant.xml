@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
+    app:strokeColor="@color/purple_500_night"
+    app:strokeWidth="1.2dp"
     app:cardCornerRadius="8dp"
-    app:cardElevation="0dp">
+    app:cardElevation="1dp">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout"
+        android:padding="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/itemChuckNorrisIcon"
-            android:layout_width="69dp"
-            android:layout_height="69dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_margin="8dp"
             android:layout_marginStart="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -41,6 +44,7 @@
             android:id="@+id/itemChuckNorrisQuote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
             tools:text="@tools:sample/full_names"
             app:layout_constraintTop_toTopOf="@+id/constrain"
             app:layout_constraintLeft_toLeftOf="@+id/constrain"
@@ -70,13 +74,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
             tools:text="@tools:sample/cities"
             app:layout_constraintTop_toBottomOf="@+id/constrain"
             app:layout_constraintLeft_toLeftOf="parent"/>
 
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            android:id="@+id/deleteItem"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_constraintRight_toRightOf="parent"
+            app:icon="@drawable/delete"
+            />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

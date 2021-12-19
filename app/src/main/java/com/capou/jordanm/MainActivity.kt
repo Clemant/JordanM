@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.capou.jordanm.api.view.ListData
 import com.capou.jordanm.databinding.ActivityMainBinding
 import com.capou.jordanm.firebase_all.view.AuthentificationFirebase
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        Glide.with(applicationContext).load("https://picsum.photos/200/300?random=1").into(binding.homePageAvatar)
 
     }
 

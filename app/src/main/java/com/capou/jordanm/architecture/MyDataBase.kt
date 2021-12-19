@@ -11,7 +11,7 @@ import com.capou.jordanm.api.model.ChuckNorrisRoom
     entities = [
         ChuckNorrisRoom::class
     ],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 abstract class CustomRoomDatabase : RoomDatabase() {

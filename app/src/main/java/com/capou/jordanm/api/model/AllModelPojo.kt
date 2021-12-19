@@ -8,6 +8,10 @@ import com.google.gson.annotations.SerializedName
 
 sealed class MyObjectForRecyclerView()
 
+data class RestaurantHeader(
+    val date:String
+):MyObjectForRecyclerView()
+
 /** Object use for Ui */
 data class ChuckNorrisUi(
     val name: String,

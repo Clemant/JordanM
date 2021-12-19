@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginBottom="20dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -9,14 +18,17 @@
     <ImageView
         android:id="@+id/home_page_avatar"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_height="90dp"
+        android:layout_margin="10dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/home_page_lastname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lastName"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.218"
@@ -41,6 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/firstName"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.229"
@@ -65,6 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/classroom"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.224"
@@ -84,11 +98,12 @@
         app:layout_constraintTop_toBottomOf="@+id/home_page_firstname_text"
         app:layout_constraintVertical_bias="0.053" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/home_page_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/list"
+        app:icon="@drawable/list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"
@@ -96,16 +111,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.4" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/home_page_firebase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/firebase"
+        app:icon="@drawable/storage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toEndOf="@+id/home_page_list"
         app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/home_page_list"
         app:layout_constraintVertical_bias="0.416" />
 
     <TextView
@@ -122,3 +139,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
