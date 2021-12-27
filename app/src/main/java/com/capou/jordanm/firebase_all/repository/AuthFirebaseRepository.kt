@@ -4,6 +4,8 @@ import android.app.AlertDialog
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -83,6 +85,17 @@ class AuthFirebaseRepository {
 
     fun getMessageListener():MutableLiveData<Map<String,String>>{
         return infoListener
+    }
+
+    fun loginWithGoogle(){
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken("306327409425-616sblmk29v1v3mj8ffjrjv8m37hrn01.apps.googleusercontent.com")
+            .requestEmail()
+            .build()
+
+
+
+
     }
 
 
