@@ -10,6 +10,7 @@
         android:id="@+id/chuckNorrisActivityRv"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layoutAnimation="@anim/animate_layout"
         app:layout_constraintBottom_toTopOf="@+id/chuckNorrisActivityAdd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="add"
+        app:icon="@drawable/add_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/chuckNorrisActivityDelete"
         app:layout_constraintStart_toStartOf="parent" />
@@ -33,6 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="delete"
+        app:icon="@drawable/delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/chuckNorrisActivityAdd" />

@@ -11,13 +11,18 @@ import android.util.Log
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.lifecycle.MutableLiveData
 import com.capou.jordanm.MainActivity
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class MyCloudMessaging : FirebaseMessagingService() {
 
+    private var default = MutableLiveData<String>()
     companion object {
         const val TAG = "MyFirebaseMessagingSrv"
     }
@@ -44,10 +49,11 @@ class MyCloudMessaging : FirebaseMessagingService() {
             remoteMessage.notification?.let { sendNotification(it) }
            Log.d(TAG, "  "+remoteMessage.data.keys+" "+remoteMessage.data.values)
             var messageKeyValue =""
-          /* for(resul in remoteMessage.data){
+           for(resul in remoteMessage.data){
                messageKeyValue = messageKeyValue+" \n"+resul.key+" -->"+ resul.value
            }
-          Toast.makeText(applicationContext,messageKeyValue,Toast.LENGTH_LONG).show()*/
+            //Toast.makeText(baseContext,messageKeyValue,Toast.LENGTH_LONG).show()
+          // default.postValue(messageKeyValue)
         }
     }
 
@@ -62,8 +68,16 @@ class MyCloudMessaging : FirebaseMessagingService() {
             .setContentText(remoteMessageNotification.body)
             .setAutoCancel(true)
             .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
-            .setContentIntent(PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE))
-        val notificationManager = this.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            .setContentIntent(
+                PendingIntent.getActivity(
+                    this,
+                    0,
+                    intent,
+                    PendingIntent.FLAG_IMMUTABLE
+                )
+            )
+        val notificationManager =
+            this.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
 
         // Since android Oreo notification channel is needed.
@@ -79,7 +93,6 @@ class MyCloudMessaging : FirebaseMessagingService() {
             // notificationId is a unique int for each notification that you must define
             notify(0, notificationBuilder.build())
         }
-
 
 
     }

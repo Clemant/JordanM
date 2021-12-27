@@ -6,7 +6,7 @@
     <string name="firstName">Prénom:</string>
     <string name="lastName">Nom:</string>
     <string name="classroom">Promo:</string>
-    <string name="list">Afficher liste</string>
+    <string name="list">liste</string>
     <string name="firebase" translatable="false">Firebase</string>
     <string name="version">Version par défaut</string>
     <string name="connexion">S\'identifier</string>
@@ -18,4 +18,5 @@
     <string name="uid">Votre UID: </string>
     <string name="addRestaurant">"add "</string>
     <string name="deleteRestaurant">delete</string>
+    <string name="password_comfim">Comfirmez mot de passe</string>
 </resources>

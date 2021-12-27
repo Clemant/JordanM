@@ -21,4 +21,7 @@ interface ChuckNorrisDao {
 
     @Query("DELETE FROM restaurant")
     fun deleteAll()
+
+    @Query("DELETE FROM restaurant WHERE phone_number =:number")
+    fun deleteById(number:String)
 }

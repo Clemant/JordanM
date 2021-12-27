@@ -12,7 +12,7 @@ android {
         applicationId "com.capou.jordanm"
         minSdk 26
         targetSdk 31
-        versionCode 1
+        versionCode 10
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -70,8 +70,13 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     //Cloud messaging
-
     implementation 'com.google.firebase:firebase-messaging-ktx'
+
+    //Material design
+    implementation 'com.google.android.material:material:1.4.0'
+
+    // Google
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
 
 
 }

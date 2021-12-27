@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import com.capou.jordanm.api.model.ChuckNorrisRetrofit
 import com.capou.jordanm.api.model.ChuckNorrisRoom
 import com.capou.jordanm.architecture.CustomApplication
-import com.capou.jordanm.architecture.CustomRoomDatabase
 import com.capou.jordanm.architecture.RetrofitBuilder
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -27,6 +26,11 @@ class ChuckNorrisQuoteRepository {
     suspend fun deleteAllChuckNorrisQuote() = withContext(Dispatchers.IO) {
         mChuckNorrisDao.deleteAll()
     }
+
+    suspend fun deleteById(phone_number:String)=
+        withContext(Dispatchers.IO){
+            mChuckNorrisDao.deleteById(phone_number)
+        }
 
    suspend fun fetchData() {
 
